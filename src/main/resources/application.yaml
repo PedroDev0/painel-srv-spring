@@ -1,7 +1,11 @@
+server:
+  servlet:
+    context-path: '/painelsrv'
 
-server.servlet.context-path: '/painelsrv'
 spring:
-  mvc.servlet.path: '/api'
+  mvc:
+    servlet:
+      path: '/api'
   jackson:
     date-format: dd/MM/yyyy HH:mm:ss
     time-zone: America/Sao_Paulo
@@ -11,12 +15,17 @@ spring:
     username: test
     password: 1234
     driver-class-name: org.h2.Driver
+
   jpa:
     hibernate:
       ddl-auto: update
     database-platform: org.hibernate.dialect.H2Dialect
     show-sql: true
+
   h2:
     console:
       enabled: true
- 
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
